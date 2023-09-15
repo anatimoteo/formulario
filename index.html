@@ -5,44 +5,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Formulário de Cadastro</title>
+    <title>Formulário de Cadastro - Escola de Música</title>
 </head>
 
 <body>
     <div class="container">
-        <h2>Formulário de Cadastro</h2>
-        <form action="#" method="post">
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-            </div>
-            <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="telefone">Telefone:</label>
-                <input type="text" id="telefone" name="telefone">
-            </div>
-            <div class="form-group">
-                <label for="endereco">Endereço:</label>
-                <input type="text" id="endereco" name="endereco">
-            </div>
-            <div class="form-group">
-                <label for="cidade">Cidade:</label>
-                <input type="text" id="cidade" name="cidade">
-            </div>
-            <div class="form-group">
-                <label for="estado">Estado:</label>
-                <input type="text" id="estado" name="estado">
-            </div>
-            <div class="form-group">
-                <label for="cep">CEP:</label>
-                <input type="text" id="cep" name="cep">
-            </div>
-            <div class="form-group">
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required>
-            </div>
-            <div class="form-group">
-                <label for="confirmarSenha
+        <h1>Pesquisa sobre o Uso da Tecnologia</h1>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <br>
+            <br>
+            <label for="sobrenome">Idade:</label>
+            <input type="text" id="idade" name="idade" required>
+            <br>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <br>
+            <label for="dispositivo">Qual é o seu dispositivo móvel principal?:</label>
+            <input type="text" id="dispositivo" name="dispositivo" required>
+            <br>
+            <br>
+            <label for="horas">Quantas horas por dia você utiliza seu dispositivo?:</label>
+            <input type="number" id="horas" name="horas" required>
+            <br>
+            <br>
+            <label for="apps">Quantos aplicativos você tem instalados em seu dispositivo móvel?</label>
+            <select id="apps" name="apps" required>
+                <option value="opcao1">Menos de 10</option>
+                <option value="opcao2">De 10 a 20</option>
+                <option value="opcao3">Entre 20 e 50</option>
+                <option value="opcao4">Mais de 50</option>
+            </select>
+            <br>
+            <br>
+
+            <label for="frequencia"> Quais tipos de aplicativos você utiliza com mais frequência em seu dispositivo
+                móvel?
+                (Marque todas as opções aplicáveis)</label>
+            <br>
+            <input type="checkbox" id="app1" name="app1" value="redesSociais">
+            <label for="app1"> Redes Sociais</label>
+            <br>
+
+            <input type="checkbox" id="app2" name="app2" value="jogos">
+            <label for="app2"> Jogos</label>
+            <br>
+            <input type="checkbox" id="app3" name="app3" value="prod">
+            <label for="app3">Produtividade (ex.: e-mail, calendário, notas) </label>
+            <br>
+            <input type="checkbox" id="app4" name="app4" value="saude">
+            <label for="app4"> Saúde e Bem-Estar</label>
+            <br>
+
+            <input type="checkbox" id="app5" name="app5" value="entretenimento">
+            <label for="app5">Entretenimento (ex.: streaming de vídeo)</label>
+            <br>
+            <input type="checkbox" id="app6" name="app6" value="educacao">
+            <label for="app6">Educação </label>
+            <br>
+
+            <label for="aplicativos">Quais são os três aplicativos que você mais utiliza no seu dia a dia? (Nome dos
+                aplicativos): </label>
+            <input type="text" id="aplicativos" name="aplicativos" required>
+            <br>
+            <br>
+
+
+            <label for="frequencia"> Você costuma fazer compras através de aplicativos móveis?</label>
+            <br>
+            <input type="radio" id="sim" name="opcao" value="SIM">
+            <label for="sim">Sim</label><br>
+            <input type="radio" id="nao" name="opcao" value="NAO">
+            <label for="nao">Não</label><br>
+
+
+
+            <label for="melhorias">Quais recursos ou melhorias você gostaria de ver em aplicativos móveis no futuro? (Sugestões)</label>
+            <input type="text" id="melhorias" name="melhorias" required>
+            <br>
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+
+</html>
