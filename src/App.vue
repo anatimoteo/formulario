@@ -50,7 +50,7 @@ function formatarPreco(preco) {
 
       <div class="row">
         <label for=""> Preço (em reais): </label>
-        <input type="number" step="0.01" v-model="produto.preco" />
+        <input type="number" step="0.01" v-model="produto.preço" />
       </div>
 
       <div class="row">
@@ -62,23 +62,25 @@ function formatarPreco(preco) {
         <legend>Categorias</legend>
         <div class="itens-checkbox">
           <template v-for="categoria in categorias" :key="categoria.id">
-            <input type="checkbox" :value="categoria.id" v-model="produto.categorias" /> {{ categoria.nome }}
+            <input type="checkbox" :value="categoria.id" v-model="produto.categorias" />
+            {{ categoria.nome }}
           </template>
         </div>
       </fieldset>
-
+      <div class="row">
+        <label for=""> Categoria: </label>
+        <input type="text" v-model="produto.categorias" />
+      </div>
       <button @click="mostrarResultado = !mostrarResultado">Mostrar</button>
     </div>
 
-    <div class="resultado">
-      <div v-if="mostrarResultado" class="resultado">
-        <h2>Dados do produto</h2>
-        <p>Nome: {{ produto.nome }}</p>
-        <P>Preço: {{ formatarPreco(produto.preco) }}</P>
-        <p>Em estoque: {{ produto.quantidade }}</p>
-        <p>Categorias: {{ produto.categorias }}</p>
-        <p>{{ mostrarResultado }}</p>
-      </div>
+    <div v-if="mostrarResultado" class="resultado">
+      <h2>Dados do produto</h2>
+      <p>nome: {{ produto.nome }}</p>
+      <P>preço: {{ formatarPreco(produto.preço) }}</P>
+      <p>em estoque: {{ produto.quantidade }}</p>
+      <p>categorias: {{ produto.categorias }}</p>
+      <p>{{ mostrarResultado }}</p>
     </div>
   </div>
 </template>
